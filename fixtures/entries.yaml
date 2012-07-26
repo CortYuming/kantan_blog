@@ -1,0 +1,53 @@
+- model: blog.entry
+  pk: 1
+  fields:
+    title: Cheetah
+    content: Mac OS X v10.0
+
+- model: blog.entry
+  pk: 2
+  fields:
+    title: Puma
+    content: Mac OS X v10.1
+
+- model: blog.entry
+  pk: 3
+  fields:
+    title: Jaguar
+    content: Mac OS X v10.2
+
+- model: blog.entry
+  pk: 4
+  fields:
+    title: Panther
+    content: Mac OS X v10.3
+
+- model: blog.entry
+  pk: 5
+  fields:
+    title: Tiger
+    content: Mac OS X v10.4
+
+- model: blog.entry
+  pk: 6
+  fields:
+    title: Leopard
+    content: Mac OS X v10.5
+
+- model: blog.entry
+  pk: 7
+  fields:
+    title: Snow Leopard
+    content: Mac OS X v10.6
+
+- model: blog.entry
+  pk: 8
+  fields:
+    title: Lion
+    content: OS X v10.7
+
+- model: blog.entry
+  pk: 9
+  fields:
+    title: Mountain Lion
+    content: OS X v10.8

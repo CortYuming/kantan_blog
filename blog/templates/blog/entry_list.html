@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block entry_content %}
+
+<table class="table table-condense">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Contents</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+{% for entry in object_list %}
+  <tr>
+    <td><a href="{% url detail entry.id %}">{{ entry.title }}</a></td>
+    <td>{{ entry.content }}</td>
+    <td>
+      <a href="{% url delete entry.id %}" class="btn btn-mini btn-danger">Delete</a>
+      <a href="{% url update entry.id %}" class="btn btn-mini btn-primary">Edit</a>
+    </td>
+  </tr>
+{% endfor %}
+</tbody>
+</table>
+  
+
+{% endblock %}

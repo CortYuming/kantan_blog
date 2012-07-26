@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block entry_content %}
+{% if form.has_errors %}
+{% for field in form.fields %}
+
+{% if field.error %}
+{{ field.error }}
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+<form method="post" action="." class="form-horizontal" >
+  <fieldset>
+    <legend>
+      {% if object %}
+      Edit
+      {% else %}
+      New
+      {% endif %}
+    </legend>
+    {% csrf_token %}
+
+    
+    <div class="control-group {% if form.title.errors %}error{% endif %}">
+      <label class="control-label" for="id_title">Title</label>
+      <div class="controls">
+        {{ form.title }}
+        <span class="help-inline">{{ form.title.errors|join:", "}}</span>
+      </div>
+    </div>
+
+    <div class="control-group {% if form.content.errors %}error{% endif %}">
+      <label class="control-label for="id_content">Contents</label>
+      <div class="controls">
+        {{ form.content }}
+        <span class="help-inline">{{ form.content.errors|join:", "}}</span>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <a href="/blog/" class="btn">Cansel</a>
+      <input type="submit" value="Save" class="btn btn-primary" />
+    </div> <!-- .form-actions -->
+  </fieldset>
+</form>
+
+
+{% endblock %}
+

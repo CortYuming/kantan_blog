@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block entry_content %}
+
+<h3>{{ object.title }}</h3>
+
+<table class="table table-bordered">
+  <tr><td>
+    {{ object.content}}
+  </td></tr>
+</table>
+
+<div>
+  <a href="{% url delete object.id %}" class="btn btn-danger">Delete</a>
+  <a href="{% url update object.id %}" class="btn btn-primary">Edit</a>
+</div>
+<br />
+
+<a href="{% url list %}" class="btn">Back</a>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block entry_content %}
+
+<form method="post" action=".">
+  {% csrf_token %}
+  <div class="alert">
+    Are you sure?
+  </div>
+  <div class="form-actions">
+    <input type="submit" value="OK" class="btn btn-danger" />
+    {% url detail object.id as detail %}
+    <a href="{% url list %}" class="btn">Cancel</a>
+  </div>
+</form>
+
+
+{% endblock %}
