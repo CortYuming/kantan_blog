@@ -4,4 +4,4 @@
 - python manage.py loaddata fixtures/entries.yaml
 
 ## Demo in Heroku
-- <http://dry-lake-9311.herokuapp.com/blog/?>
+- <http://dry-lake-9311.herokuapp.com/blog/>
